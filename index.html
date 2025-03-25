@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>React SPA Template : Title Goes Here</title>
+</head>
+
+<body>
+  <div id="app-root"></div>
+</body>
+<script>
+  window.addEventListener('load', () => {
+    window.setTimeout(() => {
+      if (!window.__appLoaded) {
+        console.log('== bundle not loaded. attempting manual bundle ==');
+        const script = document.createElement('script');
+        script.src = './lib/index.js?v=' + Date.now(); // set static in webpack dev server to root 
+        document.body.appendChild(script);
+        window.__appLoaded = true;
+      }
+    }, 10)
+  })
+</script>
+
+</html>

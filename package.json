@@ -1,0 +1,61 @@
+{
+  "name": "react-ts-webpack-template",
+  "version": "1.2.0",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "webpack",
+    "build:prod": "npm run clean && webpack --mode production",
+    "build:clean": "npm run clean && npm run build",
+    "build:clean:prod": "npm run clean && npm run build:prod",
+    "clean": "rimraf ./lib",
+    "local": "webpack serve",
+    "test": "jest --config ./jest.config.js --collect-coverage",
+    "watch": "webpack watch --mode development"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "webpack",
+    "jest",
+    "state-provider",
+    "react context",
+    "react-router"
+  ],
+  "author": "Chad Neff (chad@neffsaid.com)",
+  "license": "MIT",
+  "description": "A template for most of my client-side SPA projects using React, TypeScript, Jest and Webpack. 'non-monorepo version'",
+  "dependencies": {
+    "@ant-design/icons": "^6.0.0",
+    "antd": "^5.24.5",
+    "dayjs": "^1.11.13",
+    "echarts": "^5.6.0",
+    "echarts-for-react": "^3.0.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "wouter": "^3.6.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-typescript": "^7.26.0",
+    "@jest/globals": "^29.7.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.9",
+    "@types/react": "^19.0.10",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.3",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "knip": "^5.46.0",
+    "rimraf": "^6.0.1",
+    "style-loader": "^4.0.0",
+    "ts-jest": "^29.2.6",
+    "ts-jest-resolver": "^2.0.1",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.8.2",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
+  }
+}
