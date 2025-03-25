@@ -1,8 +1,4 @@
 import { Award } from '../types/dojo-types';
-export interface StudentAvatarProps {
-    student: string;
-    studentAvatar: string;
-}
 export interface StudentCardProps {
     studentHistory: Award[];
     studentBehaviors: Record<string, any>;
